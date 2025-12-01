@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.center-nav {
+  width: 80%;
+}

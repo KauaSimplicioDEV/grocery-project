@@ -1,7 +1,9 @@
+import Splash from "@/components/splash/Splash";
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <Splash />
     </main>
   );
 }
