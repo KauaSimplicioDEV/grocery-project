@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import LoginImage from "../../../public/login-grocey-project.svg";
+import LoginImage from "../../../public/login-grocery-project.svg";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { MdOutlineLock } from "react-icons/md";
@@ -9,6 +9,7 @@ import Link from "next/link";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 
 const loginSchema = z.object({
   email: z.email("Invalid email format"),
@@ -21,6 +22,8 @@ const loginSchema = z.object({
 type LoginInputs = z.infer<typeof loginSchema>;
 
 const Login = () => {
+  const [isEyeOpen, setIsEyeOpen] = useState(false);
+
   const {
     handleSubmit,
     register,
@@ -43,7 +46,7 @@ const Login = () => {
       <div className="center-nav mx-auto text-[#E96301] py-5">
         <div className="flex flex-col gap-2 justify-center items-center mt-5">
           <h1 className="text-4xl font-semibold">FoodNote</h1>
-          <p className="text-[#C05100]">Ready to make some shopping?</p>
+          <p className="text-[#C05100] text-lg">Ready to make some shopping?</p>
         </div>
 
         <form
@@ -66,12 +69,22 @@ const Login = () => {
           <label className="text-lg">Password</label>
           <div className="relative flex items-center border border-[#E96301] rounded p-1 text-black">
             <input
-              type="password"
+              type={isEyeOpen ? "text" : "password"}
               className="mx-7 w-96 outline-none"
               {...register("password")}
             />
             <MdOutlineLock className="absolute left-2 text-lg text-[#E96301]" />
-            <HiOutlineEye className="absolute right-2 text-lg text-[#E96301] cursor-pointer" />
+            {!isEyeOpen ? (
+              <HiOutlineEyeOff
+                className="absolute right-2 top-2 text-lg text-[#E96301] cursor-pointer select-none"
+                onClick={() => setIsEyeOpen(!isEyeOpen)}
+              />
+            ) : (
+              <HiOutlineEye
+                className="absolute right-2 top-2 text-lg text-[#E96301] cursor-pointer select-none"
+                onClick={() => setIsEyeOpen(!isEyeOpen)}
+              />
+            )}
           </div>
           {errors.password && (
             <p className="text-red-500">{errors.password.message}</p>
@@ -82,7 +95,7 @@ const Login = () => {
               <input type="checkbox" className="accent-[#E96301] w-4 h-4" />
               <p className="ml-1">Remember-me</p>
             </div>
-            <Link href={"/forget-password"}>forgot your password?</Link>
+            <Link href={"/forgot-password"}>forgot your password?</Link>
           </div>
 
           <button
