@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import LoginImage from "../../../public/login-grocey-project.svg";
+import RegisterImage from "../../../public/register-grocery-project.svg";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -47,14 +47,14 @@ const Register = () => {
   return (
     <section className="bg-[#E8E3CE] min-h-screen">
       <Image
-        src={LoginImage}
+        src={RegisterImage}
         alt="Imagem da tela de login"
         className="w-full"
       />
       <div className="center-nav mx-auto text-[#E96301] py-5">
         <div className="flex flex-col gap-2 justify-center items-center mt-5">
           <h1 className="text-4xl font-semibold">FoodNote</h1>
-          <p className="text-[#C05100]">
+          <p className="text-[#C05100] text-lg">
             Create your personalized grocery list
           </p>
         </div>
