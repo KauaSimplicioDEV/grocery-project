@@ -63,14 +63,15 @@ const ForgotPassword = () => {
             <p className="text-red-500">{errors.email.message}</p>
           )}
 
-          <button
-            className="bg-[#E96301] p-2 text-white cursor-pointer mt-10 font-semibold rounded-lg"
+          <Link
+            href={"/recover-password"}
+            className="bg-[#E96301] p-2 text-center text-white cursor-pointer mt-10 font-semibold rounded-lg"
             type="submit"
           >
             Recover password
-          </button>
+          </Link>
           <Link
-          href={"/login"}
+            href={"/login"}
             className="border border-[#E96301] p-2 text-[#E96301] text-center cursor-pointer mt-2 font-semibold rounded-lg"
             type="submit"
           >
