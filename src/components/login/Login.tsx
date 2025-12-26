@@ -92,8 +92,14 @@ const Login = () => {
 
           <div className="flex justify-between items-center mt-1">
             <div className="flex items-center">
-              <input type="checkbox" className="accent-[#E96301] w-4 h-4" />
-              <p className="ml-1">Remember-me</p>
+              <input
+                id="consent"
+                type="checkbox"
+                className="accent-[#E96301] w-4 h-4 cursor-pointer peer"
+              />
+              <label htmlFor="consent" className="ml-1 cursor-pointer">
+                Remember-me
+              </label>
             </div>
             <Link href={"/forgot-password"}>forgot your password?</Link>
           </div>
