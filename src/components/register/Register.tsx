@@ -53,7 +53,7 @@ const Register = () => {
       />
       <div className="center-nav mx-auto text-[#E96301] py-5">
         <div className="flex flex-col gap-2 justify-center items-center mt-5">
-          <h1 className="text-4xl font-semibold">FoodNote</h1>
+          <h2 className="text-4xl font-semibold">FoodNote</h2>
           <p className="text-[#C05100] text-lg">
             Create your personalized grocery list
           </p>
