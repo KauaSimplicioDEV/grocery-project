@@ -20,7 +20,7 @@ const Menu = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-2xl cursor-pointer"
             />
-            <h3 className="font-medium">Make your grocery list</h3>
+            <h3 className="font-medium text-sm">Make your grocery list</h3>
           </div>
           <div className="flex items-center gap-4 w-1/2 justify-end">
             <FaSearch />
