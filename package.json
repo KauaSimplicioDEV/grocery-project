@@ -9,11 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.11.1",
     "@hookform/resolvers": "^5.2.2",
     "@neondatabase/serverless": "^1.0.2",
+    "@prisma/client": "^6.19.2",
+    "@prisma/extension-accelerate": "^3.0.1",
     "dotenv": "^17.2.3",
     "drizzle-orm": "^0.44.6",
     "next": "15.5.0",
+    "next-auth": "^5.0.0-beta.30",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.68.0",
@@ -29,6 +33,7 @@
     "drizzle-kit": "^0.31.5",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
+    "prisma": "^6.19.2",
     "tailwindcss": "^4",
     "tsx": "^4.20.6",
     "typescript": "^5"

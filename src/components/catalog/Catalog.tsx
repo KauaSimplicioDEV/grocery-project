@@ -7,7 +7,7 @@ const Catalog = () => {
     <section className="bg-[#FCF7EB] min-h-screen">
       <div className="relative">
         <Menu />
-        <div className="pt-10 center-nav mx-auto relative">
+        <div className="pt-10 relative">
           <Filters />
           <Products />
         </div>

@@ -29,8 +29,8 @@ const filterFoods = [
 const Filters = () => {
   const [selectedFilter, setSelectedFilter] = useState(0);
   return (
-    <div className="flex gap-2 overflow-x-auto no-scrollbar pb-4 pl-4 -ml-4">
-      <div className="flex flex-row items-center gap-2">
+    <nav className="flex gap-2 overflow-x-auto no-scrollbar pb-4 pl-4 -ml-4">
+      <div className="flex flex-row items-center gap-2 center-nav mx-auto">
         {filterFoods.map((item, index) => (
           <div
             key={item.title}
@@ -38,13 +38,12 @@ const Filters = () => {
             onClick={() => setSelectedFilter(index)}
           >
             <div
-              className={`absolute ${
-                selectedFilter === index
-                  ? "bg-[#E96301]"
-                  : "bg-[#E8E3CE" || selectedFilter === 0
+              className={`absolute ${selectedFilter === index
+                ? "bg-[#E96301]"
+                : "bg-[#E8E3CE" || selectedFilter === 0
                   ? "bg-[#E8E3CE]"
                   : "bg-[#E96301]"
-              } rounded-full p-2 w-10 h-10 flex-row items-center justify-center`}
+                } rounded-full p-2 w-10 h-10 flex-row items-center justify-center`}
             >
               <Image
                 src={item.image}
@@ -59,7 +58,7 @@ const Filters = () => {
           </div>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 
